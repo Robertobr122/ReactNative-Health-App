@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { View, ScrollView, Animated } from 'react-native';
-import BottomMenu from './components/BottonMenu/BottonMenu'; // Menu inferior
+import BottomMenu from './components/ButtonMenu/ButtonMenu'; // Menu inferior
 import Header from './components/Header/Header'; // Cabeçalho
 import styles from './style'; // Estilos gerais
 import GreetingInput from './components/GreetingInput/GreetingInput';
 import Selection from './components/Selection/Selection';
-import FilterButton from './components/FilterBotton/FilterButton';
+import FilterButton from './components/FilterButton/FilterButton';
 
 
 export default function App() {

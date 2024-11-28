@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, TouchableOpacity } from 'react-native';
 import { Ionicons } from '@expo/vector-icons'; // Biblioteca de ícones
-import styles from './BottonStyle'; // Importando estilos
+import styles from './ButtonStyle'; // Importando estilos
 
 // Componente BottomMenu
 export default function BottomMenu() {

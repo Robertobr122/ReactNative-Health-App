@@ -1,51 +1,48 @@
-import React, {useState} from 'react';
+import React from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 import { Ionicons } from '@expo/vector-icons'; // Para ícones dos checkboxes
-import styles  from './SelectionStyle';
+import styles from './SelectionStyle';
 
+// Definição do tipo das propriedades
+interface SelectionComponentProps {
+  selectedOptions: string[];
+  onToggleOption: (option: string) => void;
+}
+
+// Lista de opções
 const options = [
-    'Enfermeiro',
-    'Nutricionista',
-    'Médico',
-    'Fisioterapeuta',
-    'Educador Físico',
-    'Todos',
+  'Enfermeiro',
+  'Nutricionista',
+  'Médico',
+  'Fisioterapeuta',
+  'Educador Físico',
+  'Todos',
 ];
 
-export default function Selection() {
-    const [selectedOptions, setSelectedOptions] = useState<string[]>([]);
-    const toggleOption = (option: string) =>{
-        if(selectedOptions.includes(option)){
-            setSelectedOptions(selectedOptions.filter((item) => item !== option));
-
-        } else {
-            setSelectedOptions([...selectedOptions, option]);
-        }
-
-    };
-    return (
+export default function Selection({
+  selectedOptions,
+  onToggleOption,
+}: SelectionComponentProps) {
+  return (
     <View style={styles.container}>
-        <View style={styles.optionConteiner2}>
+      <View style={styles.optionConteiner2}>
         {options.map((option) => (
-            <TouchableOpacity
-            key = {option}
-            style = {styles.optionContainer}
-            onPress={()=> toggleOption(option)}
-            >
-                <View style={styles.checkbox}>
-                    {selectedOptions.includes(option) && (
-                        <Ionicons name='close' size={16} color='#008970'></Ionicons>
-                    )}
-                </View>
-                <Text style={styles.optionText}>{option}</Text>
-
-                
-            </TouchableOpacity>
-
+          <TouchableOpacity
+            key={option}
+            style={styles.optionContainer}
+            onPress={() => onToggleOption(option)} // Passa o evento para o pai
+          >
+            {/* Checkbox */}
+            <View style={styles.checkbox}>
+              {selectedOptions.includes(option) && (
+                <Ionicons name="close" size={16} color="#008970" />
+              )}
+            </View>
+            {/* Texto da opção */}
+            <Text style={styles.optionText}>{option}</Text>
+          </TouchableOpacity>
         ))}
-        </View>
-
-
+      </View>
     </View>
   );
 }

@@ -4,9 +4,19 @@ import { Ionicons } from '@expo/vector-icons'; // Ícones
 
 import { styles } from './GreetingInputStyle';
 
-export function GreetingInput() {
+interface GreetingInputProps {
+  onCityChange: (city: string) => void;
+}
+
+export  default function GreetingInput({ onCityChange }: GreetingInputProps) {
   const [city, setCity] = useState(''); // Estado para armazenar o nome da cidade
-    return (
+
+  const handleTextChange = (text: string) => {
+    setCity(text); // Atualiza o estado local
+    onCityChange(text); // Notifica o componente pai
+  };
+  
+  return (
     <View>
         <Text style={styles.greeting}>Olá, Roberto!</Text>
 
@@ -17,7 +27,7 @@ export function GreetingInput() {
                 placeholder='Digite sua Cidade'
                 placeholderTextColor="#f9f9f9"
                 value={city}
-                onChangeText={setCity}
+                onChangeText={handleTextChange}
             ></TextInput>
         </View>
                

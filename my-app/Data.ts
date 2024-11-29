@@ -1,0 +1,51 @@
+export const profiles = [
+    {
+        id: 1,
+        imageUri: 'https://media.istockphoto.com/photos/studio-shot-of-face-of-handsome-man-doctor-wearing-eyeglasses-against-picture-id855127756?k=20&m=855127756&s=170667a&w=0&h=D2nAuIAmAdyz-jCJLEXqzL6bobxheUJ24l3Y-frTdNo=',
+        name: 'Dr. João Silva',
+        subtitle: 'Médico Clínico Geral',
+        stars: 5,
+    },
+    {
+        id: 2,
+        imageUri: 'https://truecare.org/wp-content/uploads/truecare-blog-prevent-hiv-with-prep-featured-image-blog-700x466-1.jpg',
+        name: 'Carlos Souza',
+        subtitle: 'Educador Físico',
+        stars: 5,
+    },
+    {
+        id: 3,
+        imageUri: 'https://img.freepik.com/fotos-premium/jovem-mulher-hispanica-vestindo-uniforme-de-fisioterapeuta-em-pe-na-clinica-mostrando-e-apontando-para-cima-com-o-dedo-numero-um-enquanto-sorria-confiante-e-feliz_839833-650.jpg',
+        name: 'Ana Clara',
+        subtitle: 'Fisioterapeuta',
+        stars: 4,
+    },
+    {
+        id: 4,
+        imageUri: 'https://th.bing.com/th/id/OIP.VJYEVPP97j9EIMfnDgFm9QHaLI?rs=1&pid=ImgDetMain',
+        name: 'Rosângela Alves',
+        subtitle: 'Fisioterapeuta',
+        stars: 4,
+    },
+    {
+        id: 5,
+        imageUri: 'https://i.pinimg.com/originals/75/95/e5/7595e5877253713a139079a7551c34c7.jpg',
+        name: 'Cristina Oliveira',
+        subtitle: 'Carla Braga',
+        stars: 4,
+    },
+    {
+        id: 6,
+        imageUri: 'https://th.bing.com/th/id/R.4450bb2ff81f7860514ebceeab2081fc?rik=PxDqaZi%2bft5CpQ&pid=ImgRaw&r=0',
+        name: 'Jesse Alberto',
+        subtitle: 'Fisioterapeuta',
+        stars: 3,
+    },
+    {
+        id: 7,
+        imageUri: 'https://thumbs.dreamstime.com/b/retrato-normal-real-da-pessoa-22299703.jpg',
+        name: 'Filipe Rocha',
+        subtitle: 'Fisioterapeuta',
+        stars: 3,
+    },
+];

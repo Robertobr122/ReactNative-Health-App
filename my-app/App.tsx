@@ -6,6 +6,9 @@ import styles from './style'; // Estilos gerais
 import GreetingInput from './components/GreetingInput/GreetingInput';
 import Selection from './components/Selection/Selection';
 import FilterButton from './components/FilterButton/FilterButton';
+import { profiles } from './Data'; // Importando os dados
+import Profile from './components/Profile/ProfileCard'
+
 
 
 export default function App() {
@@ -67,13 +70,17 @@ export default function App() {
         <FilterButton city={city} selectedOptions={selectedOptions} />
 
         <View style={styles.content}>
-
-          {Array.from({ length: 50 }).map((_, index) => (
-            <Animated.Text key={index} style={styles.text}>
-              Conteúdo da página {index + 1}.
-            </Animated.Text>
-          ))};
-
+          {profiles.map((profile) => (
+            <Profile
+              key={profile.id}
+              imageUri={profile.imageUri}
+              name={profile.name}
+              subtitle={profile.subtitle}
+              stars={profile.stars}
+              onProfilePress={() => console.log(`Perfil de ${profile.name}`)}
+              onChatPress={() => console.log(`Chat com ${profile.name}`)}
+            />
+          ))}
         </View>
       </ScrollView>
 

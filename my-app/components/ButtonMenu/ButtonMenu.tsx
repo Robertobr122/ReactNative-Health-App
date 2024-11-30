@@ -1,27 +1,26 @@
 import React from 'react';
 import { View, TouchableOpacity } from 'react-native';
-import { Ionicons } from '@expo/vector-icons'; // Biblioteca de ícones
-import styles from './ButtonStyle'; // Importando estilos
+import { Ionicons } from '@expo/vector-icons';
+import styles from './ButtonStyle';
 
-// Componente BottomMenu
-export default function BottomMenu() {
+interface BottomMenuProps {
+  onProfilePress: () => void;
+}
+
+export default function BottomMenu({ onProfilePress }: BottomMenuProps) {
   return (
     <View style={styles.bottomMenu}>
-      {/* Botão de sanduíche */}
       <TouchableOpacity style={styles.menuButton}>
         <Ionicons name="menu" size={40} color="white" />
       </TouchableOpacity>
 
-      {/* Botão de conversas */}
       <TouchableOpacity style={styles.menuButton}>
         <Ionicons name="chatbubbles" size={40} color="white" />
       </TouchableOpacity>
 
-      {/* Botão de perfil */}
-      <TouchableOpacity style={styles.menuButton}>
+      <TouchableOpacity style={styles.menuButton} onPress={onProfilePress}>
         <Ionicons name="person" size={40} color="white" />
       </TouchableOpacity>
     </View>
   );
 }
-

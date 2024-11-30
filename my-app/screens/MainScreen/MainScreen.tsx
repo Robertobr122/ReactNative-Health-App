@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { View, ScrollView, Animated } from 'react-native';
-import BottomMenu from '../components/ButtonMenu/ButtonMenu'; // Menu inferior
-import Header from '../components/Header/Header'; // Cabeçalho
-import styles from './MainScreenStyle'; // Estilos gerais
-import GreetingInput from '../components/GreetingInput/GreetingInput';
-import Selection from '../components/Selection/Selection';
-import FilterButton from '../components/FilterButton/FilterButton';
-import { profiles } from '../Data'; // Importando os dados
-import Profile from '../components/Profile/ProfileCard';
+import BottomMenu from '../../components/ButtonMenu/ButtonMenu';
+import Header from '../../components/Header/Header';
+import styles from './MainScreenStyle';
+import GreetingInput from '../../components/GreetingInput/GreetingInput';
+import Selection from '../../components/Selection/Selection';
+import FilterButton from '../../components/FilterButton/FilterButton';
+import { profiles } from '../../Data';
+import Profile from '../../components/Profile/ProfileCard';
 
 export default function MainScreen({ navigation }: { navigation: any }) {
   const [scrollY, setScrollY] = useState(new Animated.Value(0));
@@ -69,14 +69,16 @@ export default function MainScreen({ navigation }: { navigation: any }) {
               name={profile.name}
               subtitle={profile.subtitle}
               stars={profile.stars}
-              onProfilePress={() => console.log(`Perfil de ${profile.name}`)}
+              onProfilePress={() => navigation.navigate('ProfileScreen')}
               onChatPress={() => console.log(`Chat com ${profile.name}`)}
             />
           ))}
         </View>
       </ScrollView>
 
-      <BottomMenu onProfilePress={() => navigation.navigate('ProfileScreen')} />
+      {/* Propriedade `onProfilePress` removida */}
+      <BottomMenu />
     </View>
   );
 }
+

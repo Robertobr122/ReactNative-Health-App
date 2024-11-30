@@ -15,6 +15,7 @@ export default StyleSheet.create({
     width: 310,
     alignItems: 'center',
     justifyContent: 'center',    
+    marginBottom: 120,
   },
   input: {
     marginTop:180,

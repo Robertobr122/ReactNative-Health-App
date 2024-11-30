@@ -9,7 +9,7 @@ interface ProfileNameSubtitleProps {
 
 export default function ProfileNameSubtitle({ name, subtitle }: ProfileNameSubtitleProps) {
   return (
-    <View>
+    <View style={styles.container}>
       <Text style={styles.name}>{name}</Text>
       <Text style={styles.subtitle}>{subtitle}</Text>
     </View>

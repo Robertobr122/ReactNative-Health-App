@@ -1,7 +1,6 @@
 import React from 'react';
-import { View, Button, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import {styles} from './ActionButtonsStyle'
-
 
 interface ActionButtonsProps {
   onProfilePress: () => void;
@@ -11,8 +10,12 @@ interface ActionButtonsProps {
 export default function ActionButtons({ onProfilePress, onChatPress }: ActionButtonsProps) {
   return (
     <View style={styles.container}>
-      <Button title="Perfil" onPress={onProfilePress} />
-      <Button title="Conversa" onPress={onChatPress} />
+      <TouchableOpacity onPress={onProfilePress}>
+        <Text style={styles.buttonText}>Perfil</Text>
+      </TouchableOpacity>
+      <TouchableOpacity onPress={onChatPress}>
+        <Text style={styles.buttonText}>Conversa</Text>
+      </TouchableOpacity>
     </View>
   );
 }

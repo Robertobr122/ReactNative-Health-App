@@ -31,7 +31,7 @@ export const profiles = [
         id: 5,
         imageUri: 'https://i.pinimg.com/originals/75/95/e5/7595e5877253713a139079a7551c34c7.jpg',
         name: 'Cristina Oliveira',
-        subtitle: 'Carla Braga',
+        subtitle: 'Nutricionista',
         stars: 4,
     },
     {

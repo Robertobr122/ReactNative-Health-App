@@ -18,7 +18,7 @@ export  default function GreetingInput({ onCityChange }: GreetingInputProps) {
   
   return (
     <View>
-        <Text style={styles.greeting}>Olá, Roberto!</Text>
+        <Text style={styles.greeting}>Ola,  Roberto!</Text>
 
 
         <View style={styles.inputContainer}>
